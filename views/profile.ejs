@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<!-- Navbar -->
+<%- include('layouts/navBar') -%>
+<!-- Navbar -->
+
+<div class="container my-5 py-5">
+    <nav aria-label="breadcrumb mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/profiles">Profiles</a></li>
+            <li class="breadcrumb-item active"><%= member.username %></li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-6 p-3">
+            <h1><%= member.username %></h1>
+            <a href="/deleteProfile/<%= member._id %>" class="btn mt-4 btn-warning">Delete Profile</a>
+        </div>
+        <div class="col-md-6 p-3">
+            <p><%= member.about %></p>
+            <p class="text-muted text-white">
+                <%= member.dateJoined.toLocaleString() %>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<%- include('layouts/footer') -%>
+<!-- footer -->
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

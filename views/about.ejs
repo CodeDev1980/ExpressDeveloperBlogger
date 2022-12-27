@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<!-- Navbar -->
+<%- include('layouts/navBar') -%>
+<!-- Navbar -->
+
+<main>
+
+    <!-- parallax intro -->
+    <%- include('components/aboutIntro') -%>
+    <!-- parallax intro -->
+
+    <!-- content -->
+    <%- include('components/about-content') -%>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-md-12 p-3">
+                <a href="/gallery" class="btn btn-outline-primary">See More in the gallery</a>
+            </div>
+        </div>
+    </div>
+    <!-- content -->
+
+</main>
+
+<!--footer-->
+<%- include('layouts/footer') -%>
+<!-- footer -->
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<!-- Navbar -->
+<%- include('layouts/navBar') -%>
+<!-- Navbar -->
+
+<main class="container my-5 py-5">
+    <h1 class="display-3 font-weight-bold mb-4">Our Express.js Members</h1>
+    <% for(i=0; i < members.length; i++) { %>
+        <div class="row">
+            <div class="col-md-4 zoom p-3">
+                <a href="/profile/<%= members[i]._id %>">
+                    <img src="https://vaguys111.com/blog/wp-content/uploads/2018/07/a-complete-seo-checklist-for-web-developers-1024x538.jpg"
+                         class="rounded img-fluid"
+                         style="max-height: 190px;"
+                         alt="<%= members[i].title %>" />
+                </a>
+            </div>
+            <div class="col-md-8 p-3">
+                <h2 class="font-weight-bold"><%= members[i].username %></h2>
+                <h3 class="text-white">Posted On <%= members[i].dateJoined.toLocaleString() %></h3>
+                <p class="text-muted text-white">
+                    <%= members[i].about.substring(0, 110) %> . . .
+                </p>
+            </div>
+        </div>
+    <% } %>
+
+</main>
+
+<!--footer-->
+<%- include('layouts/footer') -%>
+<!-- footer -->
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

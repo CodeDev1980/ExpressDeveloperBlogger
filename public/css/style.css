@@ -1,0 +1,40 @@
+body {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+
+.logo {
+    border: 7px double white;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+#tag2 {
+    display: none;
+}
+
+.maxSize {
+    max-height: 310px;
+}
+
+.line {
+    border: 3px solid white;
+    background-color: white;
+    width: 200px;
+}
+
+@media(max-width: 768px){
+    .maxSize {
+        max-height: none;
+    }
+}
+
+@media(max-width: 550px){
+    #tag1 {
+        display: none;
+    }
+    #tag2 {
+        display: block;
+    }
+}

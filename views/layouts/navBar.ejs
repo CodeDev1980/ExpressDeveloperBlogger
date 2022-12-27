@@ -1,0 +1,234 @@
+<nav class="navbar navbar-expand-lg navbar-dark special-color-dark">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand text-uppercase" href="/">
+        <span class="logo">SB</span>
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+            aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+
+            <!-- Features -->
+            <li class="nav-item dropdown mega-dropdown">
+                <a class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink2" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Features
+                </a>
+                <div class="dropdown-menu mega-menu v-2 z-depth-1 special-color py-5 px-3"
+                     aria-labelledby="navbarDropdownMenuLink2">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 sub-menu mb-xl-0 mb-4">
+                            <h6 class="sub-title text-uppercase font-weight-bold white-text">Featured</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="menu-item pl-0" href="/">
+                                        <i class="fas fa-caret-right pl-1 pr-3"></i>Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu-item pl-0" href="/about">
+                                        <i class="fas fa-caret-right pl-1 pr-3"></i>About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu-item pl-0" href="/gallery">
+                                        <i class="fas fa-caret-right pl-1 pr-3"></i>Gallery
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="menu-item pl-0" href="/blogs">
+                                        <i class="fas fa-caret-right pl-1 pr-3"></i>Articles
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-xl-3 sub-menu mb-xl-0 mb-4">
+                            <h6 class="sub-title text-uppercase font-weight-bold white-text">Related</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="menu-item pl-0" href="#!">
+                                        <i class="fas fa-caret-right pl-1 pr-3"></i>Coding Education
+                                    </a>
+                                </li>
+                                <% if(loggedIn) { %>
+                                    <li>
+                                        <a class="menu-item pl-0" href="/profiles">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Profiles
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="/create">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>New Blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="/logout">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Logout
+                                        </a>
+                                    </li>
+                                <% } %>
+                                <% if(!loggedIn) { %>
+                                    <li>
+                                        <a class="menu-item pl-0" href="/profiles">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>About Members
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="/register">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>SignUp
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="/login">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Login
+                                        </a>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Technology -->
+            <% if(loggedIn){ %>
+                <li class="nav-item dropdown mega-dropdown">
+                    <a class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink3" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Technology</a>
+                    <div class="dropdown-menu mega-menu v-2 z-depth-1 special-color py-5 px-3"
+                         aria-labelledby="navbarDropdownMenuLink3">
+                        <div class="row">
+                            <div class="col-md-6 col-xl-4 sub-menu mb-md-0 mb-4">
+                                <h6 class="sub-title text-uppercase font-weight-bold white-text">Related</h6>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Quis nostrud exercitation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Duis aute irure dolor in
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Laboris nisi ut aliquip ex ea commodo consequat
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Reprehenderit in voluptate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Esse cillum dolore eu fugiat nulla pariatur
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-xl-4 sub-menu mb-0">
+                                <h6 class="sub-title text-uppercase font-weight-bold white-text">Design</h6>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Excepteur sint occaecat
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Sunt in culpa qui officia
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Sed ut perspiciatis unde omnis iste natus error
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Mollit anim id est laborum
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item pl-0" href="#!">
+                                            <i class="fas fa-caret-right pl-1 pr-3"></i>Accusantium doloremque laudantium
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <% } %>
+            <!-- Lifestyle -->
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fab fa-github"></i> Github
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </li>
+        </ul>
+        <!-- Links -->
+
+        <!-- Search form -->
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <% if(!loggedIn){ %>
+                        <i class="fas fa-user"></i>
+                    <% } %>
+                    <% if(loggedIn){ %>
+                        <i class="fas fa-user-tag"></i>
+                    <% } %>
+                </a>
+                <% if(!loggedIn){ %>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                         aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="/register">SignUp</a>
+                        <a class="dropdown-item" href="/login">Login</a>
+                    </div>
+                <% } %>
+                <% if(loggedIn){ %>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                         aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="/profiles">Profiles</a>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                        <a class="dropdown-item" href="/coding">Coding</a>
+                    </div>
+                <% } %>
+            </li>
+        </ul>
+    </div>
+    <!-- Collapsible content -->
+
+</nav>

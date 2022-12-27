@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<!-- Navbar -->
+<%- include('layouts/navBar') -%>
+<!-- Navbar -->
+
+<div class="container my-5 py-5">
+    <nav aria-label="breadcrumb mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/blogs">Blogs</a></li>
+            <li class="breadcrumb-item active"><%= blog.title %></li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-6 p-3">
+            <img src="<%= blog.image %>"
+                 class="rounded mb-3 img-fluid"
+                 alt="<%= blog.title %>" />
+            <p>Posted By Express Member <br>
+            Posted On <%= blog.datePosted.toLocaleString() %></p>
+            <% if(loggedIn) { %>
+                <div class="mt-2 text-center">
+                    <a href="/delete/<%= blog._id %>" class="btn btn-warning rounded-pill">Delete Post</a>
+                </div>
+            <% } %>
+        </div>
+        <div class="col-md-6 p-3">
+            <h1><%= blog.title %></h1>
+            <p class="text-muted text-white">
+                <%= blog.body %>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<%- include('layouts/footer') -%>
+<!-- footer -->
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>
