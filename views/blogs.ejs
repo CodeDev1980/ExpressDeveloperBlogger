@@ -1,39 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <%- include('layouts/header') -%>
 <body>
-<!-- Navbar -->
 <%- include('layouts/navBar') -%>
-<!-- Navbar -->
 
-<main class="container my-5 py-5">
-    <h1 class="display-3 font-weight-bold mb-4">Express.js Blogs Examples</h1>
-    <% for(i=0; i < articles.length; i++) { %>
-        <div class="row">
-            <div class="col-md-4 zoom p-3">
-                <a href="/post/<%= articles[i]._id %>">
-                    <img src="<%= articles[i].image %>"
-                         class="rounded img-fluid"
-                         alt="<%= articles[i].title %>" />
-                </a>
-            </div>
-            <div class="col-md-8 p-3">
-                <h2 class="font-weight-bold">Express Member</h2>
-                <h3 class="text-white">Posted On <%= articles[i].datePosted.toLocaleString() %></h3>
-                <p class="text-muted text-white">
-                    <%= articles[i].body.substring(0, 110) %> . . .
-                </p>
-            </div>
-        </div>
-    <% } %>
+<div class="container-fluid" style="margin-top: 160px;">
 
-</main>
+    <%- include('cards/blogsPageData') -%>
 
-<!--footer-->
+</div>
+
 <%- include('layouts/footer') -%>
-<!-- footer -->
-
-<%- include('layouts/scripts') -%>
-
 </body>
+<%- include('layouts/scripts') -%>
 </html>

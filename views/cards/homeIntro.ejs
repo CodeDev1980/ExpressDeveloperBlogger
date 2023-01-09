@@ -1,0 +1,31 @@
+<div class="parallax"
+     data-mdb-max-height="650"
+     data-mdb-image-src="/img/vencislav-sharkov.png" >
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center mb-8"
+             style="height: 90vh;">
+            <div class="text-center">
+
+                <div data-mdb-toggle="animation"
+                    data-mdb-animation="zoom-in"
+                    data-mdb-animation-start="onLoad">
+                    <img src="/img/mountain.png"
+                         style="height: 140px;"
+                         class="img-fluid" alt="logo">
+                </div>
+                <h2 data-mdb-toggle="animation"
+                    data-mdb-animation="zoom-in"
+                    data-mdb-animation-delay="200"
+                    data-mdb-animation-start="onLoad"
+                    class="text-white">
+                    The place to go for your website needs, let's build something together.
+                </h2>
+                <% if (locals.isAuthenticated) { %>
+                    <p class="text-white">You are logged in. <a href="/profile" class="text-white fw-bold">View your profile</a>.</p>
+                <% } else { %>
+                    <p class="text-white">You are not logged in. <a href="/login" class="text-white fw-bold">Login</a>.</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,10 +12,12 @@ const registerController = require('../controllers/registerUser');
 const storeUserController = require('../controllers/storeUsers');
 const loginController = require('../controllers/login');
 const loginUserController = require('../controllers/loginUser');
-const profilesController = require('../controllers/profiles');
-const singleProfileController = require('../controllers/singleProfile');
 const logoutController = require('../controllers/logoutUser');
-const deleteMemberController = require('../controllers/deleteProfile');
+const newProjectController = require('../controllers/newProject');
+const storeProjectController = require('../controllers/StoreProject');
+const projectsPageController = require('../controllers/projectsPage');
+const singleProjectController = require('../controllers/singleProject');
+const deleteProjectController = require('../controllers/deleteProject');
 
 const authMiddleWare = require('../middleware/authorized');
 const redirectMiddleWare = require('../middleware/redirectIfUser');
@@ -24,6 +26,11 @@ const redirectMiddleWare = require('../middleware/redirectIfUser');
 router.get('/', homeController);
 router.get('/about', aboutController);
 router.get('/gallery', galleryController);
+router.get('/newProject', newProjectController); // no ejs page yet
+router.post('/project/store', storeProjectController); // no ejs page yet
+router.get('/projects', projectsPageController); // no ejs page yet
+router.get('/singleProject/:id', singleProjectController); // no ejs page yet
+router.get('/deleteProject/:id', deleteProjectController); // no ejs page yet
 router.get('/blogs', blogsController);
 router.get('/post/:id', singlePostController);
 router.get('/create', authMiddleWare, createPostController);
@@ -33,9 +40,6 @@ router.get('/register', redirectMiddleWare, registerController);
 router.post('/store/user', storeUserController);
 router.get('/login', redirectMiddleWare, loginController);
 router.post('/login/user', loginUserController);
-router.get('/profiles', profilesController);
-router.get('/profile/:id', singleProfileController);
 router.get('/logout', logoutController);
-router.get('/deleteProfile/:id', deleteMemberController);
 
 module.exports = router;
